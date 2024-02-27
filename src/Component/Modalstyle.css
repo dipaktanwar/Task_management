@@ -1,0 +1,111 @@
+.modal{
+     width: 100vw;
+     height: 100vh;
+     position: fixed;
+     top: 0;
+     left: 0;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     background-color: rgba(0, 0, 0, 0.5);
+}
+.container{
+    width: 700px;
+    height: 500px;
+   border-radius: 10px;
+    background-color: white;
+}
+.title{
+    margin-left: 20px;
+    font-size: 18px;
+}
+.inputfiald{
+    width: 630px;
+    height: 50px;
+    margin-left: 17px;
+    padding-left: 20px;
+    position: relative;
+    top: -27px;
+    border: 0.5px solid black;
+    border-radius: 10px;
+}
+.priority{
+   display: flex;
+}
+.priority h4{
+    margin-left: 23px;
+    position: relative;
+    top: -30px;
+}
+.imgdiv{
+margin-left: 20px;
+position: relative;
+top: -10px;
+}
+.checklist{
+    position: relative;
+    top: -40px;
+    left: 20px;
+    width: 600px;
+   
+}
+.div1{
+    width: 550px;
+    height: 50px;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.575) ;
+    border-radius: 10px;
+    margin-top: 10px;
+   
+   
+}
+.div2{
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 100px;
+}
+.addbtn{
+    position: fixed;
+}
+.footerbtn{
+  position: fixed;
+   top: 80%;
+   display: flex;
+   justify-content: space-evenly;
+}
+.select{
+    margin-left: 20px;
+    border: none;
+    width: 200px;
+    height:50px ;
+    border-radius: 15px;
+    font-size: 20px;
+    color: #707070;
+}
+.cancel{
+    margin-left: 60px;
+    border: none;
+    width: 185px;
+    height:45px ;
+    border: 2px solid red;
+    background-color: white;
+    border-radius: 15px;
+    font-size: 20px;
+    color: red;
+
+}
+.save{
+    margin-left: 30px;
+    border: none;
+    width: 185px;
+    height:45px ;
+    background-color: #17A2B8;
+    border-radius: 15px;
+    font-size: 20px;
+    color: white;
+
+}
+.delete-btn{
+    border: none;
+    background-color: white;
+}

@@ -1,0 +1,13 @@
+.Board{
+    position: absolute;
+    top: 14%;
+    left: 18%;
+    width: auto;
+    height: auto;
+   font-weight: 400;
+}
+.herosection{
+    display: flex;
+    justify-content: space-evenly;
+
+}

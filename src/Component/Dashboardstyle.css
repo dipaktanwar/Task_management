@@ -1,0 +1,21 @@
+
+.dashboard{
+    width: 200px;
+    height: 100vh;
+}
+.image{
+    position: relative;
+    top: 30px;
+    left: 7%;
+}
+
+ul{
+    list-style: none;
+    margin-top: 70px;
+    margin-left: 10px;
+}
+ul li{
+    margin-top: 20px;
+}
+
+
