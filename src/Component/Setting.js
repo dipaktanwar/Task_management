@@ -1,9 +1,10 @@
 import React from 'react'
-
+import Data from './Settingstyle/Setting'
+import data1 from './Settingstyle/Settingstyle.css'
 export default function Setting() {
   return (
-    <div>
-      <h1> byyy</h1>
-    </div>
+   <>
+  <Data></Data>
+   </>
   )
 }

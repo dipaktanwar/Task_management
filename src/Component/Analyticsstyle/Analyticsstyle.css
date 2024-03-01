@@ -1,0 +1,109 @@
+.analytics{
+    position: absolute;
+    top: 14%;
+    left: 18%;
+    width: 300px;
+    height: 300px;
+   font-weight: 400;
+   width: auto;
+}
+.main{
+    display: flex;
+    justify-content: space-evenly;
+}
+.circale{
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #90C4CC;
+
+}
+.first{
+    width: 450px;
+    height: 280px;
+    background-color:#F9FCFF;
+    border-radius: 15px;
+}
+.second{
+    margin-left: 50px;
+    width: 450px;
+    height: 280px;
+    background-color:#F9FCFF;
+    border-radius: 15px;
+}
+.divset{
+     margin: 50px;
+     display: flex;
+    width: auto;
+    height: 5px;
+}
+.text{
+    margin-left: 7px;
+    position: relative;
+    top: -10px;
+    font-size: 18px;
+    font-weight: 600;
+}
+.text2{
+    margin-left: 7px;
+    position: relative;
+    top: -10px;
+    left: 200px;
+    font-size: 18px;
+    font-weight: 600;
+
+}
+.text3{
+    margin-left: 7px;
+    position: relative;
+    top: -9px;
+    left: 217px;
+    font-size: 18px;
+    font-weight: 600;
+
+}
+.text4{
+    margin-left: 7px;
+    position: relative;
+    top: -9px;
+    left: 183px;
+    font-size: 18px;
+    font-weight: 600;
+
+}
+.text5{
+    margin-left: 7px;
+    position: relative;
+    top: -9px;
+    left: 225px;
+    font-size: 18px;
+    font-weight: 600;
+
+}
+.text6{
+    margin-left: 7px;
+    position: relative;
+    top: -9px;
+    left: 156px;
+    font-size: 18px;
+    font-weight: 600;
+
+}
+.text7{
+    margin-left: 7px;
+    position: relative;
+    top: -9px;
+    left: 198px;
+    font-size: 18px;
+    font-weight: 600;
+
+}
+.text8{
+    margin-left: 7px;
+    position: relative;
+    top: -9px;
+    left: 187px;
+    font-size: 18px;
+    font-weight: 600;
+
+}

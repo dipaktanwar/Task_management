@@ -5,17 +5,49 @@ import Midimage from './image/Frame 5.png'
 import Lowimage from './image/Frame 7.png'
 import Addimage from './image/add.png'
 import  Deleteimage from './image/Delete.png'
+import axios from 'axios'
+import {useNavigate} from 'react-router-dom'
+import DatePicker from 'react-date-picker';
 
 export default function Modal({oncancel}) {
-    const priorities = ['HiGH', 'MODRATE', 'LOW'];
+  const navigate=useNavigate();
+  
+    let [priority,setpriority]=useState('')
+    let [tasktittle,settasktittle]=useState('')
+    let [date,setdate]=useState('')
 
-  const handlePriorityChange = (priority) => {
-    console.log(`${priority} PRIORITY`);
-    
-  };
+  
   const [inputs, setInputs] = useState([]);
   const [Count ,setCount] = useState(0);
   const [isChecked, setIsChecked] = useState(false);
+
+
+
+
+  async function submitHandler(){
+    console.log(inputs,'count',Count,'ischeck',isChecked,tasktittle,priority);
+   let data= {
+      taskTittle:tasktittle,
+      priority:priority,
+      date:date,
+      checklist:inputs
+    }
+    try {
+      let res=await axios.post('http://localhost:5400/api/v1/taskroutes/todo',data, { withCredentials: true }).then((res)=>{
+  console.log(res);
+  window.alert(res)
+  oncancel();
+  navigate('/board')
+}).catch(err=>{
+  console.log(err);
+})
+      
+    } catch (error) {
+      console.log(error);
+      
+    }
+    
+  }
 
   const handleInputChange = (index, value) => {
     const newInputs = [...inputs];
@@ -47,14 +79,14 @@ export default function Modal({oncancel}) {
          <div  className='container'>
          <div>
             <h5 className='title'> Title*</h5>
-            <input  type='text' placeholder='Enter Task Title'  className ='inputfiald'/>
+            <input  type='text' placeholder='Enter Task Title'  className ='inputfiald' onChange={(e)=>{settasktittle(e.target.value)}}/>
          </div>
          <div className='priority'>
             <h4> Select priority *</h4>
            
-      <div onClick={() => handlePriorityChange('HIGH')}  className ='imgdiv'>< img src={Highimage}  /> </div>
-      <div onClick={() => handlePriorityChange('MODRATE')}  className ='imgdiv' > < img src={Midimage}  />  </div>
-      <div onClick={() => handlePriorityChange('LOW')}  className ='imgdiv'> < img src={Lowimage }  />  </div>
+      <div onClick={() => { setpriority('HIGH')}}  className ='imgdiv'>< img src={Highimage}  /> </div>
+      <div onClick={() => setpriority('MODRATE')}  className ='imgdiv' > < img src={Midimage}  />  </div>
+      <div onClick={() => setpriority('LOW')}  className ='imgdiv'> < img src={Lowimage }  />  </div>
     </div>
       <div className='checklist'>
          <h5> Checklist( /{Count} )</h5>
@@ -90,9 +122,12 @@ export default function Modal({oncancel}) {
            <div onClick={handleAddInput}  className='addbtn'> < img src={Addimage }/>  </div>
 
            <div className='footerbtn'>    
-           <button  className='select'> Select Due Date</button>
+           {/* <button  className='select' >Select Due Date</button> */}
+           
+           <input type='date' className='select'></input>
+           
            <button className='cancel'  onClick={()=>{oncancel()}}> Cancel</button>
-           <button className='save'> Save</button>
+           <button className='save' onClick={submitHandler}> Save</button>
 
            </div>
            </div>

@@ -16,10 +16,24 @@
     justify-content: center;
     align-items: center;
 }
-.form{
-    position: relative;
+.form {
+   
     top: 20%;
     left: 24%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
 }
 .img{
     position: relative;
@@ -31,13 +45,24 @@
     border: none;
     margin: 10px;
 }
-.btn{
-    margin-left: 150px;
+.btn {
+   
     width: 250px;
     height: 40px;
     color: aliceblue;
     background-color: #17A2B8;
     border: none;
+    border-radius: 15px;
+    font-size: 17px;
+}
+.register {
+    color:  #17A2B8;
+    background-color:aliceblue ;
+ 
+    width: 250px;
+    height: 40px;
+    
+    border: 1px solid #17A2B8;
     border-radius: 15px;
     font-size: 17px;
 }
@@ -82,3 +107,17 @@ li:active{
     opacity: 0.6;
 }
 
+.logininput{
+    width: 400px;
+    height: 30px;
+    border: none;
+    margin: 10px;
+
+}
+.loginp{
+    width: 400px;
+    height: 30px;
+    border: none;
+    margin: 10px;
+
+}
